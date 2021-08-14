@@ -9,7 +9,7 @@
 // 		}
 // 	};
 
-// 	for (const type of ['chrome', 'node', 'electron'] ) {
-// 		replaceText(`${ type }-version`, process.versions[ type ]);
+// 	for (const type of ['chrome', 'node', 'electron']) {
+// 		replaceText(`${type}-version`, process.versions[type]);
 // 	}
-// } );
+// });
