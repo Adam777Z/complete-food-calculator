@@ -224,6 +224,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#iodine-ri').textContent = percent_format.format( ( parseFloat( complete_food[product][flavor]['iodine'] ) * amount ) / ri['iodine'] );
 	}
 
+
 	function calculate_values2() {
 		document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount2').value) / parseFloat(document.querySelector('#amount3').value);
 	}
