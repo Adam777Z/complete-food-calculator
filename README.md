@@ -1,2 +1,2 @@
 # Complete Food Calculator
-Complete Food Calculator App
+Complete Food Calculator
