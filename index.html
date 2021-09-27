@@ -34,6 +34,8 @@
 
 		<div id="section-main" class="row" style="display: none;">
 			<div class="col-md-12 col-lg-8 mx-auto">
+
+
 				<div class="row my-3">
 					<div class="col">
 						<span><input type="number" class="form-control d-inline w-auto" id="amount2" min="1" value="100" placeholder="1"> / <input type="number" class="form-control d-inline w-auto" id="amount3" min="1" value="100" placeholder="1"> = <input type="text" class="form-control d-inline w-auto" id="amount-result" autocomplete="off" readonly></span>
@@ -48,9 +50,13 @@
 							<select id="product" class="form-select d-inline-block w-auto" aria-label="Complete Food"></select>
 						</div>
 
-						<div class="d-inline-block mt-2 mt-md-auto">
+						<div class="d-inline-block me-2 mt-2 mt-md-auto">
 							<label for="flavor" class="d-inline-block">Flavor:</label>
 							<select id="flavor" class="form-select d-inline-block w-auto" aria-label="Flavor"></select>
+						</div>
+
+						<div class="d-inline-block mt-2 mt-md-auto">
+							<a id="product-link" href="" target="_blank" rel="nofollow noopener noreferrer"><i class="bi bi-box-arrow-up-right" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open product page"></i></a>
 						</div>
 					</div>
 				</div>
@@ -68,7 +74,7 @@
 								<div>
 									<div class="row">
 										<div class="col">
-											<span>Average nutritional value per</span>
+											<span class="fw-bold">Average nutritional value per</span>
 										</div>
 										<div class="col">
 											<span><input type="number" class="form-control d-inline" style="width: 100px;" id="amount" min="1" value="100" placeholder="1"> g</span>
@@ -236,7 +242,7 @@
 								<div class="mt-3">
 									<div class="row">
 										<div class="col">
-											<span>Vitamins</span>
+											<span class="fw-bold">Vitamins</span>
 										</div>
 										<div class="col"></div>
 										<div class="col">
@@ -391,7 +397,7 @@
 								<div class="mt-3">
 									<div class="row">
 										<div class="col">
-											<span>Minerals</span>
+											<span class="fw-bold">Minerals</span>
 										</div>
 										<div class="col"></div>
 										<div class="col">

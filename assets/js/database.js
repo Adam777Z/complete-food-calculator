@@ -1,6 +1,7 @@
 var complete_food = {
 	"Soylent Powder v1.9": {
 		"Original": {
+			"url": "https://soylent.com/products/powder-original",
 			"kcal": 4.44,
 			"kj": 18.60,
 			"fat": 0.2109,
@@ -44,6 +45,7 @@ var complete_food = {
 			"iodine": 0
 		},
 		"Cacao": {
+			"url": "https://soylent.com/products/powder-cacao",
 			"kcal": 4.44,
 			"kj": 18.60,
 			"fat": 0.222,
@@ -89,6 +91,7 @@ var complete_food = {
 	},
 	"Huel Powder v3.0": {
 		"Unflavored & Unsweetened (US)": {
+			"url": "https://huel.com/products/huel",
 			"kcal": 4,
 			"kj": 16.8,
 			"fat": 0.13,
@@ -141,6 +144,7 @@ var complete_food = {
 			"bacillus_coagulans_mn": 1.53
 		},
 		"Unflavored & Unsweetened (EU)": {
+			"url": "https://eu.huel.com/products/huel",
 			"kcal": 4,
 			"kj": 16.8,
 			"fat": 0.13,
@@ -196,6 +200,7 @@ var complete_food = {
 	},
 	"Huel Powder Black Edition v1.1": {
 		"Unflavored & Unsweetened (US)": {
+			"url": "https://huel.com/products/huel-black-edition",
 			"kcal": 4.44,
 			"kj": 18.66,
 			"fat": 0.2,
@@ -249,6 +254,7 @@ var complete_food = {
 			"epigallocatechin_gallate_mg": 0.44,
 		},
 		"Unflavored & Unsweetened (EU)": {
+			"url": "https://eu.huel.com/products/huel-black-edition",
 			"kcal": 4.44,
 			"kj": 18.66,
 			"fat": 0.2,
@@ -305,6 +311,7 @@ var complete_food = {
 	},
 	"Jimmy Joy Plenny Shake v3.0": {
 		"Vanilla": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.17,
 			"kj": 17.46,
 			"fat": 0.15,
@@ -342,6 +349,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Chocolate": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.22,
 			"kj": 17.67,
 			"fat": 0.17,
@@ -378,7 +386,46 @@ var complete_food = {
 			"molybdenum": 0.14,
 			"iodine": 0.32
 		},
+		"Coconut": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
+			"kcal": 4.25,
+			"kj": 17.78,
+			"fat": 0.17,
+			"fat_saturated": 0.036,
+			"carbohydrate": 0.42,
+			"carbohydrate_sugars": 0.037,
+			"fiber": 0.088,
+			"protein": 0.215,
+			"salt": 0.003,
+			"vitamin_a": 1.68,
+			"vitamin_b1": 0.004,
+			"vitamin_b2": 0.003,
+			"vitamin_b3": 0.038,
+			"vitamin_b5": 0.013,
+			"vitamin_b6": 0.004,
+			"vitamin_b7": 0.11,
+			"vitamin_b9": 0.63,
+			"vitamin_b12": 0.034,
+			"vitamin_c": 0.42,
+			"vitamin_d": 0.053,
+			"vitamin_e": 0.042,
+			"vitamin_k": 0.17,
+			"potassium": 4.21,
+			"chloride": 2.94,
+			"calcium": 1.95,
+			"phosphorus": 1.47,
+			"magnesium": 0.79,
+			"iron": 0.034,
+			"zinc": 0.021,
+			"copper": 0.004,
+			"manganese": 0.011,
+			"selenium": 0.19,
+			"chromium": 0.084,
+			"molybdenum": 0.14,
+			"iodine": 0.32
+		},
 		"Banana": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.17,
 			"kj": 17.45,
 			"fat": 0.15,
@@ -416,6 +463,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Strawberry": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.16,
 			"kj": 17.4,
 			"fat": 0.15,
@@ -453,6 +501,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Mango": {
+			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.18,
 			"kj": 17.49,
 			"fat": 0.15,
@@ -492,6 +541,7 @@ var complete_food = {
 	},
 	"Jimmy Joy Plenny Shake Active v3.0": {
 		"Neutral": {
+			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.27,
 			"kj": 17.85,
 			"fat": 0.17,
@@ -529,6 +579,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Vanilla": {
+			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.23,
 			"kj": 17.71,
 			"fat": 0.16,
@@ -566,6 +617,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Chocolate": {
+			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.23,
 			"kj": 17.71,
 			"fat": 0.17,
@@ -603,6 +655,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Banana": {
+			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.22,
 			"kj": 17.66,
 			"fat": 0.16,
@@ -640,6 +693,7 @@ var complete_food = {
 			"iodine": 0.32
 		},
 		"Strawberry": {
+			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.19,
 			"kj": 17.55,
 			"fat": 0.16,
@@ -679,6 +733,7 @@ var complete_food = {
 	},
 	"Queal Steady 5.0 Vegan": {
 		"All": {
+			"url": "https://queal.com/shop/steady-vegan/",
 			"kcal": 4.24,
 			"kj": 17.79,
 			"fat": 0.155,

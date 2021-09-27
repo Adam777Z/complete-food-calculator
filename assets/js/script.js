@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'iodine': 150,
 		};
 
+		document.querySelector('#product-link').href = complete_food[product][flavor]['url'];
+
 		document.querySelector('#kcal').textContent = number_format.format( parseFloat( complete_food[product][flavor]['kcal'] ) * amount );
 		document.querySelector('#kj').textContent = number_format.format( parseFloat( complete_food[product][flavor]['kj'] ) * amount );
 
