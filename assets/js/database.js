@@ -346,7 +346,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
@@ -384,7 +385,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Coconut": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
@@ -422,7 +424,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
@@ -460,7 +463,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
@@ -498,7 +502,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Mango": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
@@ -536,7 +541,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		}
 	},
 	"Jimmy Joy Plenny Shake Active v3.0": {
@@ -576,7 +582,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Vanilla": {
 			"url": "https://jimmyjoy.com/products/plenny-shake-active",
@@ -614,7 +621,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
 			"url": "https://jimmyjoy.com/products/plenny-shake-active",
@@ -652,7 +660,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
 			"url": "https://jimmyjoy.com/products/plenny-shake-active",
@@ -690,7 +699,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
 			"url": "https://jimmyjoy.com/products/plenny-shake-active",
@@ -728,7 +738,8 @@ var complete_food = {
 			"selenium": 0.19,
 			"chromium": 0.084,
 			"molybdenum": 0.14,
-			"iodine": 0.32
+			"iodine": 0.32,
+			"bacillus_coagulans_mn": 5
 		}
 	},
 	"Queal Steady 5.0 Vegan": {
