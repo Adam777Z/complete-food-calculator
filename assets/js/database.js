@@ -347,6 +347,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
@@ -386,6 +387,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Coconut": {
@@ -425,6 +427,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
@@ -464,6 +467,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
@@ -503,6 +507,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Mango": {
@@ -542,6 +547,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		}
 	},
@@ -583,6 +589,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Vanilla": {
@@ -622,6 +629,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
@@ -661,6 +669,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
@@ -700,6 +709,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
@@ -739,6 +749,7 @@ var complete_food = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
+			"choline_mg": 1.1,
 			"bacillus_coagulans_mn": 5
 		}
 	},
