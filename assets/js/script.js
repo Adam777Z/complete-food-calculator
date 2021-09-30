@@ -227,26 +227,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 
-	function calculate_values2() {
-		document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount2').value) / parseFloat(document.querySelector('#amount3').value);
-	}
+	// function calculate_values2() {
+	// 	document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount2').value) / parseFloat(document.querySelector('#amount3').value);
+	// }
 
-	document.querySelectorAll('#amount2, #amount3').forEach((e) => {
-		['input', 'change'].forEach((event) => {
-			e.addEventListener((event), (event2) => {
-				calculate_values2();
-			});
-		});
+	// document.querySelectorAll('#amount2, #amount3').forEach((e) => {
+	// 	['input', 'change'].forEach((event) => {
+	// 		e.addEventListener((event), (event2) => {
+	// 			calculate_values2();
+	// 		});
+	// 	});
 
-		e.addEventListener('click', (event) => {
-			event.target.select();
-		});
-	});
+	// 	e.addEventListener('click', (event) => {
+	// 		event.target.select();
+	// 	});
+	// });
 
-	document.querySelector('#amount-result').addEventListener('click', (event) => {
-		event.target.select();
-		document.execCommand('copy');
-	});
+	// document.querySelector('#amount-result').addEventListener('click', (event) => {
+	// 	event.target.select();
+	// 	document.execCommand('copy');
+	// });
 
-	calculate_values2();
+	// calculate_values2();
 });
