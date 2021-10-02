@@ -54,9 +54,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		calculate_values();
 	});
 
-	['input', 'change'].forEach((type) => {
-		document.querySelector('#amount').addEventListener(type, (event) => {
-			calculate_values();
+	document.querySelectorAll('#amount, #amount2').forEach((e) => {
+		['input', 'change'].forEach((event) => {
+			e.addEventListener((event), (event2) => {
+				calculate_values();
+			});
 		});
 	});
 
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		let product = document.querySelector('select[id="product"]').value;
 		let flavor = document.querySelector('select[id="flavor"]').value;
 		let amount = parseInt( document.querySelector('#amount').value );
+		let amount2 = parseInt( document.querySelector('#amount2').value );
 
 		let ri = {
 			'kcal': 2000,
@@ -80,6 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'fat_saturated': 20,
 			'carbohydrate': 260,
 			'carbohydrate_sugars': 90,
+			'carbohydrate_sugars_added': 50,
 			'fiber': 28,
 			'protein': 50,
 			'salt': 6,
@@ -122,6 +126,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		if (complete_food[product][flavor]['fat_polyunsaturated'] !== undefined) {
 			document.querySelector('#fat-polyunsaturated').textContent = number_format.format( parseFloat( complete_food[product][flavor]['fat_polyunsaturated'] ) * amount );
+			document.querySelector('#fat-polyunsaturated-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fat_polyunsaturated'] ) * amount ) * amount2 );
 			document.querySelector('#fat-polyunsaturated-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fat-polyunsaturated-container').style.display = 'none';
@@ -129,6 +134,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		if (complete_food[product][flavor]['fat_monounsaturated'] !== undefined) {
 			document.querySelector('#fat-monounsaturated').textContent = number_format.format( parseFloat( complete_food[product][flavor]['fat_monounsaturated'] ) * amount );
+			document.querySelector('#fat-monounsaturated-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fat_monounsaturated'] ) * amount ) * amount2 );
 			document.querySelector('#fat-monounsaturated-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fat-monounsaturated-container').style.display = 'none';
@@ -136,6 +142,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		if (complete_food[product][flavor]['fat_trans'] !== undefined) {
 			document.querySelector('#fat-trans').textContent = number_format.format( parseFloat( complete_food[product][flavor]['fat_trans'] ) * amount );
+			document.querySelector('#fat-trans-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fat_trans'] ) * amount ) * amount2 );
 			document.querySelector('#fat-trans-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fat-trans-container').style.display = 'none';
@@ -146,6 +153,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		if (complete_food[product][flavor]['carbohydrate_sugars_added'] !== undefined) {
 			document.querySelector('#carbohydrate-sugars-added').textContent = number_format.format( parseFloat( complete_food[product][flavor]['carbohydrate_sugars_added'] ) * amount );
+			document.querySelector('#carbohydrate-sugars-added-ri').textContent = percent_format.format( ( parseFloat( complete_food[product][flavor]['carbohydrate_sugars_added'] ) * amount ) / ri['carbohydrate_sugars_added'] );
+			document.querySelector('#carbohydrate-sugars-added-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['carbohydrate_sugars_added'] ) * amount ) * amount2 );
 			document.querySelector('#carbohydrate-sugars-added-container').style.display = 'flex';
 		} else {
 			document.querySelector('#carbohydrate-sugars-added-container').style.display = 'none';
@@ -155,6 +164,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		if (complete_food[product][flavor]['fiber_soluble'] !== undefined) {
 			document.querySelector('#fiber-soluble').textContent = number_format.format( parseFloat( complete_food[product][flavor]['fiber_soluble'] ) * amount );
+			document.querySelector('#fiber-soluble-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fiber_soluble'] ) * amount ) * amount2 );
 			document.querySelector('#fiber-soluble-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fiber-soluble-container').style.display = 'none';
@@ -224,14 +234,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#chromium-ri').textContent = percent_format.format( ( parseFloat( complete_food[product][flavor]['chromium'] ) * amount ) / ri['chromium'] );
 		document.querySelector('#molybdenum-ri').textContent = percent_format.format( ( parseFloat( complete_food[product][flavor]['molybdenum'] ) * amount ) / ri['molybdenum'] );
 		document.querySelector('#iodine-ri').textContent = percent_format.format( ( parseFloat( complete_food[product][flavor]['iodine'] ) * amount ) / ri['iodine'] );
+
+		document.querySelector('#kcal-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['kcal'] ) * amount ) * amount2 );
+		document.querySelector('#kj-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['kj'] ) * amount ) * amount2 );
+		document.querySelector('#fat-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fat'] ) * amount ) * amount2 );
+		document.querySelector('#fat-saturated-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fat_saturated'] ) * amount ) * amount2 );
+		document.querySelector('#carbohydrate-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['carbohydrate'] ) * amount ) * amount2 );
+		document.querySelector('#carbohydrate-sugars-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['carbohydrate_sugars'] ) * amount ) * amount2 );
+		document.querySelector('#fiber-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['fiber'] ) * amount ) * amount2 );
+		document.querySelector('#protein-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['protein'] ) * amount ) * amount2 );
+		document.querySelector('#salt-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['salt'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-a-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_a'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b1-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b1'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b2-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b2'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b3-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b3'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b5-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b5'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b6-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b6'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b7-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b7'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b9-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b9'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b12-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_b12'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-c-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_c'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-d-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_d'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-e-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_e'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-k-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['vitamin_k'] ) * amount ) * amount2 );
+		document.querySelector('#potassium-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['potassium'] ) * amount ) * amount2 );
+		document.querySelector('#chloride-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['chloride'] ) * amount ) * amount2 );
+		document.querySelector('#calcium-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['calcium'] ) * amount ) * amount2 );
+		document.querySelector('#phosphorus-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['phosphorus'] ) * amount ) * amount2 );
+		document.querySelector('#magnesium-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['magnesium'] ) * amount ) * amount2 );
+		document.querySelector('#iron-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['iron'] ) * amount ) * amount2 );
+		document.querySelector('#zinc-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['zinc'] ) * amount ) * amount2 );
+		document.querySelector('#copper-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['copper'] ) * amount ) * amount2 );
+		document.querySelector('#manganese-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['manganese'] ) * amount ) * amount2 );
+		document.querySelector('#selenium-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['selenium'] ) * amount ) * amount2 );
+		document.querySelector('#chromium-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['chromium'] ) * amount ) * amount2 );
+		document.querySelector('#molybdenum-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['molybdenum'] ) * amount ) * amount2 );
+		document.querySelector('#iodine-x').textContent = number_format.format( ( parseFloat( complete_food[product][flavor]['iodine'] ) * amount ) * amount2 );
 	}
 
 
 	// function calculate_values2() {
-	// 	document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount2').value) / parseFloat(document.querySelector('#amount3').value);
+	// 	document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount3').value) / parseFloat(document.querySelector('#amount4').value);
 	// }
 
-	// document.querySelectorAll('#amount2, #amount3').forEach((e) => {
+	// document.querySelectorAll('#amount3, #amount4').forEach((e) => {
 	// 	['input', 'change'].forEach((event) => {
 	// 		e.addEventListener((event), (event2) => {
 	// 			calculate_values2();
