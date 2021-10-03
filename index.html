@@ -16,660 +16,666 @@
 	<div class="container py-3">
 
 		<div class="row">
-			<div class="col-md-12 col-lg-10 col-xl-8 mx-auto">
-				<h1>Complete Food Calculator</h1>
-			</div>
-		</div>
-
-		<div id="spinner-container" class="row" style="display: none;">
-			<div class="col d-flex justify-content-center">
-				<div class="spinner-border text-primary" style="width: 15rem; height: 15rem; border-width: 1rem;" role="status">
-					<span class="visually-hidden">Loading...</span>
-				</div>
-			</div>
-		</div>
-
-		<div id="section-main" class="row" style="display: none;">
-			<div class="col-md-12 col-lg-10 col-xl-8 mx-auto">
-
-				<!-- <div class="row my-3">
-					<div class="col">
-						<span><input type="number" class="form-control d-inline w-auto" id="amount3" min="1" value="100" placeholder="1"> / <input type="number" class="form-control d-inline w-auto" id="amount4" min="1" value="100" placeholder="1"> = <input type="text" class="form-control d-inline w-auto" id="amount-result" autocomplete="off" readonly></span>
-					</div>
-				</div> -->
-
+			<div class="col col-lg-9 col-xl-8 col-xxl-7 mx-auto">
 				<div class="row">
 					<div class="col">
-						<div class="d-inline-block me-2">
-							<label for="product" class="d-inline-block">Complete Food:</label>
-							<select id="product" class="form-select d-inline-block w-auto" aria-label="Complete Food"></select>
+
+						<h1 class="d-flex justify-content-between">Complete Food Calculator <a href="https://github.com/Adam777Z/complete-food-calculator" target="_blank" title="GitHub"><i class="bi bi-github"></i></a></h1>
+
+						<div id="spinner-container" class="row" style="display: none;">
+							<div class="col d-flex justify-content-center">
+								<div class="spinner-border text-primary" style="width: 15rem; height: 15rem; border-width: 1rem;" role="status">
+									<span class="visually-hidden">Loading...</span>
+								</div>
+							</div>
 						</div>
 
-						<div class="d-inline-block me-2 mt-2 mt-md-auto">
-							<label for="flavor" class="d-inline-block">Flavor:</label>
-							<select id="flavor" class="form-select d-inline-block w-auto" aria-label="Flavor"></select>
-						</div>
+						<div id="section-main" class="row" style="display: none;">
+							<div class="col">
 
-						<div class="d-inline-block mt-2 mt-md-auto">
-							<a id="product-link" href="" target="_blank" rel="nofollow noopener noreferrer"><i class="bi bi-box-arrow-up-right" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open product page"></i></a>
-						</div>
-					</div>
-				</div>
+								<!-- <div class="row my-3">
+									<div class="col">
+										<span><input type="number" class="form-control d-inline w-auto" id="amount3" min="1" value="100" placeholder="1"> / <input type="number" class="form-control d-inline w-auto" id="amount4" min="1" value="100" placeholder="1"> = <input type="text" class="form-control d-inline w-auto" id="amount-result" autocomplete="off" readonly></span>
+									</div>
+								</div> -->
 
-				<div class="row">
-					<div class="col">
-						<h2>Nutrition facts</h2>
-					</div>
-				</div>
+								<div class="row">
+									<div class="col">
+										<div class="d-inline-block me-2">
+											<label for="product" class="d-inline-block">Complete Food:</label>
+											<select id="product" class="form-select d-inline-block w-auto" aria-label="Complete Food"></select>
+										</div>
 
-				<div class="row">
-					<div class="col col-lg-10">
-						<div class="card">
-							<div class="card-body">
-								<div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Average nutritional value per</span>
+										<div class="d-inline-block me-2 mt-2 mt-md-auto">
+											<label for="flavor" class="d-inline-block">Flavor:</label>
+											<select id="flavor" class="form-select d-inline-block w-auto" aria-label="Flavor"></select>
 										</div>
-										<div class="col-3">
-											<span><input type="number" class="form-control d-inline" style="width: 80px;" id="amount" min="1" value="100" placeholder="1"> g</span>
-										</div>
-										<div class="col-2">
-											<span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="Reference daily intake of an average adult <br>(2000 kcal/8400 kJ)"></i></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span>x <input type="number" class="form-control d-inline" style="width: 60px;" id="amount2" min="1" value="3" placeholder="1"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Energy</span>
-										</div>
-										<div class="col-3">
-											<span><span id="kcal"></span> <span>kcal</span></span>
-										</div>
-										<div class="col-2">
-											<span id="kcal-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span><span id="kcal-x"></span> <span>kcal</span></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span></span>
-										</div>
-										<div class="col-3">
-											<span><span id="kj"></span> <span>kJ</span></span>
-										</div>
-										<div class="col-2">
-											<span id="kj-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span><span id="kj-x"></span> <span>kJ</span></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Fat (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fat"></span>
-										</div>
-										<div class="col-2">
-											<span id="fat-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fat-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="ps-3">of which saturated (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fat-saturated"></span>
-										</div>
-										<div class="col-2">
-											<span id="fat-saturated-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fat-saturated-x"></span>
-										</div>
-									</div>
-									<div id="fat-polyunsaturated-container" class="row">
-										<div class="col">
-											<span class="ps-3">of which polyunsaturated (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fat-polyunsaturated"></span>
-										</div>
-										<div class="col-2">
-											<span id="fat-polyunsaturated-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fat-polyunsaturated-x"></span>
-										</div>
-									</div>
-									<div id="fat-monounsaturated-container" class="row">
-										<div class="col">
-											<span class="ps-3">of which monounsaturated (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fat-monounsaturated"></span>
-										</div>
-										<div class="col-2">
-											<span id="fat-monounsaturated-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fat-monounsaturated-x"></span>
-										</div>
-									</div>
-									<div id="fat-trans-container" class="row">
-										<div class="col">
-											<span class="ps-3">of which trans (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fat-trans"></span>
-										</div>
-										<div class="col-2">
-											<span id="fat-trans-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fat-trans-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Carbohydrate (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="carbohydrate"></span>
-										</div>
-										<div class="col-2">
-											<span id="carbohydrate-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="carbohydrate-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="ps-3">of which sugars (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="carbohydrate-sugars"></span>
-										</div>
-										<div class="col-2">
-											<span id="carbohydrate-sugars-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="carbohydrate-sugars-x"></span>
-										</div>
-									</div>
-									<div id="carbohydrate-sugars-added-container" class="row">
-										<div class="col">
-											<span class="ps-5">added (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="carbohydrate-sugars-added"></span>
-										</div>
-										<div class="col-2">
-											<span id="carbohydrate-sugars-added-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="carbohydrate-sugars-added-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Fiber (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fiber"></span>
-										</div>
-										<div class="col-2">
-											<span id="fiber-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fiber-x"></span>
-										</div>
-									</div>
-									<div id="fiber-soluble-container" class="row">
-										<div class="col">
-											<span class="ps-3">soluble (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="fiber-soluble"></span>
-										</div>
-										<div class="col-2">
-											<span id="fiber-soluble-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="fiber-soluble-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Protein (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="protein"></span>
-										</div>
-										<div class="col-2">
-											<span id="protein-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="protein-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Salt (g)</span>
-										</div>
-										<div class="col-3">
-											<span id="salt"></span>
-										</div>
-										<div class="col-2">
-											<span id="salt-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="salt-x"></span>
+
+										<div class="d-inline-block mt-2 mt-md-auto">
+											<a id="product-link" href="" target="_blank" rel="nofollow noopener noreferrer"><i class="bi bi-box-arrow-up-right" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open product page"></i></a>
 										</div>
 									</div>
 								</div>
 
-								<div class="mt-3">
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Vitamins</span>
-										</div>
-										<div class="col-3"></div>
-										<div class="col-2">
-											<!-- <span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="% of the reference daily intake for vitamins"></i></span> -->
-										</div>
-										<div class="col-3 col-md-2"></div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin A (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-a"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-a-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-a-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>1</sub>/Thiamine (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b1"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b1-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b1-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>2</sub>/Riboflavin (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b2"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b2-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b2-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>3</sub>/Niacin (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b3"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b3-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b3-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>5</sub>/Pantothenic acid (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b5"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b5-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b5-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>6</sub> (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b6"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b6-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b6-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>7</sub>/Biotin (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b7"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b7-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b7-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>9</sub>/Folic acid (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b9"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b9-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b9-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin B<sub>12</sub> (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-b12"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-b12-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-b12-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin C (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-c"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-c-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-c-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin D (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-d"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-d-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-d-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin E (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-e"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-e-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-e-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Vitamin K (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="vitamin-k"></span>
-										</div>
-										<div class="col-2">
-											<span id="vitamin-k-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="vitamin-k-x"></span>
-										</div>
+								<div class="row">
+									<div class="col">
+										<h2>Nutrition facts</h2>
 									</div>
 								</div>
 
-								<div class="mt-3">
-									<div class="row">
-										<div class="col">
-											<span class="fw-bold">Minerals</span>
-										</div>
-										<div class="col-3"></div>
-										<div class="col-2">
-											<!-- <span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="% of the reference daily intake for minerals"></i></span> -->
-										</div>
-										<div class="col-3 col-md-2"></div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Potassium (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="potassium"></span>
-										</div>
-										<div class="col-2">
-											<span id="potassium-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="potassium-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Chloride (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="chloride"></span>
-										</div>
-										<div class="col-2">
-											<span id="chloride-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="chloride-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Calcium (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="calcium"></span>
-										</div>
-										<div class="col-2">
-											<span id="calcium-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="calcium-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Phosphorus (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="phosphorus"></span>
-										</div>
-										<div class="col-2">
-											<span id="phosphorus-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="phosphorus-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Magnesium (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="magnesium"></span>
-										</div>
-										<div class="col-2">
-											<span id="magnesium-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="magnesium-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Iron (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="iron"></span>
-										</div>
-										<div class="col-2">
-											<span id="iron-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="iron-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Zinc (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="zinc"></span>
-										</div>
-										<div class="col-2">
-											<span id="zinc-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="zinc-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Copper (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="copper"></span>
-										</div>
-										<div class="col-2">
-											<span id="copper-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="copper-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Manganese (mg)</span>
-										</div>
-										<div class="col-3">
-											<span id="manganese"></span>
-										</div>
-										<div class="col-2">
-											<span id="manganese-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="manganese-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Selenium (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="selenium"></span>
-										</div>
-										<div class="col-2">
-											<span id="selenium-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="selenium-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Chromium (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="chromium"></span>
-										</div>
-										<div class="col-2">
-											<span id="chromium-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="chromium-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Molybdenum (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="molybdenum"></span>
-										</div>
-										<div class="col-2">
-											<span id="molybdenum-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="molybdenum-x"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<span>Iodine (μg)</span>
-										</div>
-										<div class="col-3">
-											<span id="iodine"></span>
-										</div>
-										<div class="col-2">
-											<span id="iodine-ri"></span>
-										</div>
-										<div class="col-3 col-md-2">
-											<span id="iodine-x"></span>
+								<div class="row">
+									<div class="col">
+										<div class="card">
+											<div class="card-body">
+												<div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Average nutritional value per</span>
+														</div>
+														<div class="col-3">
+															<span><input type="number" id="amount" class="form-control d-inline" style="width: 80px;" min="1" value="100" placeholder="1"> g</span>
+														</div>
+														<div class="col-2">
+															<span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="Reference daily intake of an average adult <br>(2000 kcal/8400 kJ)"></i></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span>x <input type="number" id="amount2" class="form-control d-inline" style="width: 60px;" min="1" value="3" placeholder="1"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Energy</span>
+														</div>
+														<div class="col-3">
+															<span><span id="kcal"></span> <span>kcal</span></span>
+														</div>
+														<div class="col-2">
+															<span id="kcal-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span><span id="kcal-x"></span> <span>kcal</span></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span></span>
+														</div>
+														<div class="col-3">
+															<span><span id="kj"></span> <span>kJ</span></span>
+														</div>
+														<div class="col-2">
+															<span id="kj-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span><span id="kj-x"></span> <span>kJ</span></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Fat (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fat"></span>
+														</div>
+														<div class="col-2">
+															<span id="fat-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fat-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="ps-3">of which saturated (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fat-saturated"></span>
+														</div>
+														<div class="col-2">
+															<span id="fat-saturated-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fat-saturated-x"></span>
+														</div>
+													</div>
+													<div id="fat-polyunsaturated-container" class="row">
+														<div class="col">
+															<span class="ps-3">of which polyunsaturated (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fat-polyunsaturated"></span>
+														</div>
+														<div class="col-2">
+															<span id="fat-polyunsaturated-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fat-polyunsaturated-x"></span>
+														</div>
+													</div>
+													<div id="fat-monounsaturated-container" class="row">
+														<div class="col">
+															<span class="ps-3">of which monounsaturated (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fat-monounsaturated"></span>
+														</div>
+														<div class="col-2">
+															<span id="fat-monounsaturated-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fat-monounsaturated-x"></span>
+														</div>
+													</div>
+													<div id="fat-trans-container" class="row">
+														<div class="col">
+															<span class="ps-3">of which trans (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fat-trans"></span>
+														</div>
+														<div class="col-2">
+															<span id="fat-trans-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fat-trans-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Carbohydrate (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="carbohydrate"></span>
+														</div>
+														<div class="col-2">
+															<span id="carbohydrate-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="carbohydrate-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="ps-3">of which sugars (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="carbohydrate-sugars"></span>
+														</div>
+														<div class="col-2">
+															<span id="carbohydrate-sugars-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="carbohydrate-sugars-x"></span>
+														</div>
+													</div>
+													<div id="carbohydrate-sugars-added-container" class="row">
+														<div class="col">
+															<span class="ps-5">added (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="carbohydrate-sugars-added"></span>
+														</div>
+														<div class="col-2">
+															<span id="carbohydrate-sugars-added-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="carbohydrate-sugars-added-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Fiber (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fiber"></span>
+														</div>
+														<div class="col-2">
+															<span id="fiber-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fiber-x"></span>
+														</div>
+													</div>
+													<div id="fiber-soluble-container" class="row">
+														<div class="col">
+															<span class="ps-3">soluble (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="fiber-soluble"></span>
+														</div>
+														<div class="col-2">
+															<span id="fiber-soluble-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="fiber-soluble-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Protein (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="protein"></span>
+														</div>
+														<div class="col-2">
+															<span id="protein-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="protein-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Salt (g)</span>
+														</div>
+														<div class="col-3">
+															<span id="salt"></span>
+														</div>
+														<div class="col-2">
+															<span id="salt-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="salt-x"></span>
+														</div>
+													</div>
+												</div>
+
+												<div class="mt-3">
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Vitamins</span>
+														</div>
+														<div class="col-3"></div>
+														<div class="col-2">
+															<!-- <span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="% of the reference daily intake for vitamins"></i></span> -->
+														</div>
+														<div class="col-3 col-md-2"></div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin A (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-a"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-a-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-a-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>1</sub>/Thiamine (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b1"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b1-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b1-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>2</sub>/Riboflavin (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b2"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b2-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b2-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>3</sub>/Niacin (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b3"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b3-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b3-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>5</sub>/Pantothenic acid (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b5"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b5-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b5-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>6</sub> (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b6"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b6-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b6-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>7</sub>/Biotin (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b7"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b7-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b7-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>9</sub>/Folic acid (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b9"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b9-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b9-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin B<sub>12</sub> (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-b12"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-b12-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-b12-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin C (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-c"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-c-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-c-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin D (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-d"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-d-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-d-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin E (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-e"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-e-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-e-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Vitamin K (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="vitamin-k"></span>
+														</div>
+														<div class="col-2">
+															<span id="vitamin-k-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="vitamin-k-x"></span>
+														</div>
+													</div>
+												</div>
+
+												<div class="mt-3">
+													<div class="row">
+														<div class="col">
+															<span class="fw-bold">Minerals</span>
+														</div>
+														<div class="col-3"></div>
+														<div class="col-2">
+															<!-- <span>RI % <i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="% of the reference daily intake for minerals"></i></span> -->
+														</div>
+														<div class="col-3 col-md-2"></div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Potassium (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="potassium"></span>
+														</div>
+														<div class="col-2">
+															<span id="potassium-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="potassium-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Chloride (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="chloride"></span>
+														</div>
+														<div class="col-2">
+															<span id="chloride-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="chloride-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Calcium (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="calcium"></span>
+														</div>
+														<div class="col-2">
+															<span id="calcium-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="calcium-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Phosphorus (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="phosphorus"></span>
+														</div>
+														<div class="col-2">
+															<span id="phosphorus-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="phosphorus-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Magnesium (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="magnesium"></span>
+														</div>
+														<div class="col-2">
+															<span id="magnesium-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="magnesium-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Iron (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="iron"></span>
+														</div>
+														<div class="col-2">
+															<span id="iron-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="iron-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Zinc (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="zinc"></span>
+														</div>
+														<div class="col-2">
+															<span id="zinc-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="zinc-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Copper (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="copper"></span>
+														</div>
+														<div class="col-2">
+															<span id="copper-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="copper-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Manganese (mg)</span>
+														</div>
+														<div class="col-3">
+															<span id="manganese"></span>
+														</div>
+														<div class="col-2">
+															<span id="manganese-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="manganese-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Selenium (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="selenium"></span>
+														</div>
+														<div class="col-2">
+															<span id="selenium-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="selenium-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Chromium (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="chromium"></span>
+														</div>
+														<div class="col-2">
+															<span id="chromium-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="chromium-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Molybdenum (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="molybdenum"></span>
+														</div>
+														<div class="col-2">
+															<span id="molybdenum-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="molybdenum-x"></span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<span>Iodine (μg)</span>
+														</div>
+														<div class="col-3">
+															<span id="iodine"></span>
+														</div>
+														<div class="col-2">
+															<span id="iodine-ri"></span>
+														</div>
+														<div class="col-3 col-md-2">
+															<span id="iodine-x"></span>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
