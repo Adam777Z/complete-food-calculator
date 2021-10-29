@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js');
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
 	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 	var tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
