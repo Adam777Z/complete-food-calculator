@@ -1,4 +1,4 @@
-var complete_food = {
+var products = {
 	"Soylent Powder v1.9": {
 		"Original": {
 			"url": "https://soylent.com/products/powder-original",
