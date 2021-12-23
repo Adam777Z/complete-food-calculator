@@ -310,7 +310,7 @@ var products = {
 		}
 	},
 	"Jimmy Joy Plenny Shake v2.0": {
-		"Neutral (unsweetened & unflavored)": {
+		"Neutral (unflavored & unsweetened)": {
 			"url": "https://jimmyjoy.com/products/plenny-shake",
 			"kcal": 4.21,
 			"kj": 17.62,
@@ -556,7 +556,7 @@ var products = {
 			"carbohydrate_sugars": 0.047,
 			"fiber": 0.083,
 			"protein": 0.21,
-			"salt": 0.0109,
+			"salt": 0.003,
 			"vitamin_a": 1.67,
 			"vitamin_b1": 0.002,
 			"vitamin_b2": 0.003,
@@ -594,7 +594,7 @@ var products = {
 			"carbohydrate_sugars": 0.046,
 			"fiber": 0.087,
 			"protein": 0.21,
-			"salt": 0.0109,
+			"salt": 0.003,
 			"vitamin_a": 1.67,
 			"vitamin_b1": 0.002,
 			"vitamin_b2": 0.003,
@@ -632,7 +632,7 @@ var products = {
 			"carbohydrate_sugars": 0.052,
 			"fiber": 0.084,
 			"protein": 0.21,
-			"salt": 0.0109,
+			"salt": 0.003,
 			"vitamin_a": 1.67,
 			"vitamin_b1": 0.002,
 			"vitamin_b2": 0.003,
@@ -670,7 +670,7 @@ var products = {
 			"carbohydrate_sugars": 0.051,
 			"fiber": 0.085,
 			"protein": 0.21,
-			"salt": 0.0109,
+			"salt": 0.003,
 			"vitamin_a": 1.67,
 			"vitamin_b1": 0.002,
 			"vitamin_b2": 0.003,
@@ -708,7 +708,7 @@ var products = {
 			"carbohydrate_sugars": 0.046,
 			"fiber": 0.084,
 			"protein": 0.21,
-			"salt": 0.0109,
+			"salt": 0.003,
 			"vitamin_a": 1.67,
 			"vitamin_b1": 0.002,
 			"vitamin_b2": 0.003,
@@ -980,7 +980,7 @@ var products = {
 		}
 	},
 	"Jimmy Joy Plenny Shake Active v3.0": {
-		"Neutral": {
+		"Neutral (unflavored & unsweetened)": {
 			"url": "https://jimmyjoy.com/products/plenny-shake-active",
 			"kcal": 4.27,
 			"kj": 17.85,
@@ -1303,7 +1303,7 @@ var products = {
 			"iodine": 0.419
 		}
 	},
-	"Satislent v2.1": {
+	"Satislent Original v2.1": {
 		"All": {
 			"url": "https://www.satislent.com/en/satislent-original",
 			"kcal": 4.19,
