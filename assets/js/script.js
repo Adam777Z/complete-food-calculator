@@ -113,11 +113,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'zinc': 10,
 			'copper': 1,
 			'manganese': 2,
-			// 'fluoride_mg': 3.5,
 			'selenium': 55,
 			'chromium': 40,
 			'molybdenum': 50,
 			'iodine': 150,
+			'fluoride': 3.5
 		};
 
 		document.querySelector('#product-link').href = products[product][flavor]['url'];
@@ -274,6 +274,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#chromium-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['chromium'] ) * amount ) * amount2 );
 		document.querySelector('#molybdenum-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['molybdenum'] ) * amount ) * amount2 );
 		document.querySelector('#iodine-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['iodine'] ) * amount ) * amount2 );
+
+		if (products[product][flavor]['fluoride'] !== undefined) {
+			document.querySelector('#fluoride').textContent = number_format.format( parseFloat( products[product][flavor]['fluoride'] ) * amount );
+			document.querySelector('#fluoride-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['fluoride'] ) * amount ) / ri['fluoride'] );
+			document.querySelector('#fluoride-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['fluoride'] ) * amount ) * amount2 );
+			document.querySelector('#fluoride-container').style.display = 'flex';
+		} else {
+			document.querySelector('#fluoride-container').style.display = 'none';
+		}
 	}
 
 
