@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'protein': 50,
 			'salt': 6,
 			'vitamin_a': 800,
-			'vitamin_b1': 1.1,
-			'vitamin_b2': 1.4,
-			'vitamin_b3': 16,
-			'vitamin_b5': 6,
+			'vitamin_b1_thiamine': 1.1,
+			'vitamin_b2_riboflavin': 1.4,
+			'vitamin_b3_niacin': 16,
+			'vitamin_b5_pantothenic_acid': 6,
 			'vitamin_b6': 1.4,
-			'vitamin_b7': 50,
-			'vitamin_b9': 200,
+			'vitamin_b7_biotin': 50,
+			'vitamin_b9_folic_acid': 200,
 			'vitamin_b12': 2.5,
 			'vitamin_c': 80,
 			'vitamin_d': 5,
@@ -177,13 +177,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#protein').textContent = number_format.format( parseFloat( products[product][flavor]['protein'] ) * amount );
 		document.querySelector('#salt').textContent = number_format.format( parseFloat( products[product][flavor]['salt'] ) * amount );
 		document.querySelector('#vitamin-a').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_a'] ) * amount );
-		document.querySelector('#vitamin-b1').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b1'] ) * amount );
-		document.querySelector('#vitamin-b2').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b2'] ) * amount );
-		document.querySelector('#vitamin-b3').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b3'] ) * amount );
-		document.querySelector('#vitamin-b5').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b5'] ) * amount );
+		document.querySelector('#vitamin-b1').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b1_thiamine'] ) * amount );
+		document.querySelector('#vitamin-b2').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b2_riboflavin'] ) * amount );
+		document.querySelector('#vitamin-b3').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b3_niacin'] ) * amount );
+		document.querySelector('#vitamin-b5').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b5_pantothenic_acid'] ) * amount );
 		document.querySelector('#vitamin-b6').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b6'] ) * amount );
-		document.querySelector('#vitamin-b7').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b7'] ) * amount );
-		document.querySelector('#vitamin-b9').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b9'] ) * amount );
+		document.querySelector('#vitamin-b7').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b7_biotin'] ) * amount );
+		document.querySelector('#vitamin-b9').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b9_folic_acid'] ) * amount );
 		document.querySelector('#vitamin-b12').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b12'] ) * amount );
 		document.querySelector('#vitamin-c').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_c'] ) * amount );
 		document.querySelector('#vitamin-d').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_d'] ) * amount );
@@ -213,13 +213,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#protein-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['protein'] ) * amount ) / ri['protein'] );
 		document.querySelector('#salt-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['salt'] ) * amount ) / ri['salt'] );
 		document.querySelector('#vitamin-a-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_a'] ) * amount ) / ri['vitamin_a'] );
-		document.querySelector('#vitamin-b1-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b1'] ) * amount ) / ri['vitamin_b1'] );
-		document.querySelector('#vitamin-b2-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b2'] ) * amount ) / ri['vitamin_b2'] );
-		document.querySelector('#vitamin-b3-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b3'] ) * amount ) / ri['vitamin_b3'] );
-		document.querySelector('#vitamin-b5-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b5'] ) * amount ) / ri['vitamin_b5'] );
+		document.querySelector('#vitamin-b1-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b1_thiamine'] ) * amount ) / ri['vitamin_b1_thiamine'] );
+		document.querySelector('#vitamin-b2-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b2_riboflavin'] ) * amount ) / ri['vitamin_b2_riboflavin'] );
+		document.querySelector('#vitamin-b3-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b3_niacin'] ) * amount ) / ri['vitamin_b3_niacin'] );
+		document.querySelector('#vitamin-b5-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b5_pantothenic_acid'] ) * amount ) / ri['vitamin_b5_pantothenic_acid'] );
 		document.querySelector('#vitamin-b6-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b6'] ) * amount ) / ri['vitamin_b6'] );
-		document.querySelector('#vitamin-b7-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b7'] ) * amount ) / ri['vitamin_b7'] );
-		document.querySelector('#vitamin-b9-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b9'] ) * amount ) / ri['vitamin_b9'] );
+		document.querySelector('#vitamin-b7-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b7_biotin'] ) * amount ) / ri['vitamin_b7_biotin'] );
+		document.querySelector('#vitamin-b9-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b9_folic_acid'] ) * amount ) / ri['vitamin_b9_folic_acid'] );
 		document.querySelector('#vitamin-b12-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_b12'] ) * amount ) / ri['vitamin_b12'] );
 		document.querySelector('#vitamin-c-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_c'] ) * amount ) / ri['vitamin_c'] );
 		document.querySelector('#vitamin-d-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['vitamin_d'] ) * amount ) / ri['vitamin_d'] );
@@ -249,13 +249,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#protein-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['protein'] ) * amount ) * amount2 );
 		document.querySelector('#salt-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['salt'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-a-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_a'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b1-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b1'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b2-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b2'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b3-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b3'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b5-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b5'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b1-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b1_thiamine'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b2-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b2_riboflavin'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b3-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b3_niacin'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b5-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b5_pantothenic_acid'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-b6-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b6'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b7-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b7'] ) * amount ) * amount2 );
-		document.querySelector('#vitamin-b9-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b9'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b7-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b7_biotin'] ) * amount ) * amount2 );
+		document.querySelector('#vitamin-b9-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b9_folic_acid'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-b12-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b12'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-c-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_c'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-d-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_d'] ) * amount ) * amount2 );
