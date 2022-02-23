@@ -1,0 +1,4 @@
+.card-body .row:not(:first-child):hover {
+	--bs-bg-opacity: 0.1;
+	background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}

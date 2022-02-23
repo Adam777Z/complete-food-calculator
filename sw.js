@@ -1,5 +1,5 @@
 const cacheName = 'complete-food-calculator-cache';
-const cacheVersion = '1.0.3'; // Needed for service worker auto update
+const cacheVersion = '1.0.4'; // Needed for service worker auto update
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(
@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
 				'/complete-food-calculator/assets/css/bootstrap.min.css',
 				'/complete-food-calculator/assets/css/bootstrap-icons.min.css',
 				'/complete-food-calculator/assets/css/fonts/bootstrap-icons.woff2',
-				// '/complete-food-calculator/assets/css/style.min.css',
+				'/complete-food-calculator/assets/css/style.min.css',
 				'/complete-food-calculator/assets/js/bootstrap.bundle.min.js',
 				'/complete-food-calculator/assets/js/database.min.js',
 				'/complete-food-calculator/assets/js/script.min.js',
