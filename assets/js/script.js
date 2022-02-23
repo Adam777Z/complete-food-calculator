@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 	// function calculate_values2() {
-	// 	document.querySelector('#amount-result').value = parseFloat(document.querySelector('#amount3').value) / parseFloat(document.querySelector('#amount4').value);
+	// 	document.querySelector('#amount-result').value = parseFloat( ( parseFloat(document.querySelector('#amount3').value) / parseFloat(document.querySelector('#amount4').value) ).toPrecision(10) );
 	// }
 
 	// document.querySelectorAll('#amount3, #amount4').forEach((e) => {
