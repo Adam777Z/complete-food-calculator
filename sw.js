@@ -1,5 +1,5 @@
 const cacheName = 'complete-food-calculator-cache';
-const cacheVersion = '1.0.4'; // Needed for service worker auto update
+const cacheVersion = '1.0.5'; // Needed for service worker auto update
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(

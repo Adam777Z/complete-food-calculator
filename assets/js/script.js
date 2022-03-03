@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		let product = document.querySelector('select[id="product"]').value;
 		let flavor = document.querySelector('select[id="flavor"]').value;
-		let amount = parseInt( document.querySelector('#amount').value );
-		let amount2 = parseInt( document.querySelector('#amount2').value );
+		let amount = parseFloat( document.querySelector('#amount').value );
+		let amount2 = parseFloat( document.querySelector('#amount2').value );
 
 		let ri = {
 			'kcal': 2000,
