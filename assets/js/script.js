@@ -80,6 +80,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		let amount = parseFloat( document.querySelector('#amount').value );
 		let amount2 = parseFloat( document.querySelector('#amount2').value );
 
+		if (isNaN(amount)) {
+			amount = 1;
+			document.querySelector('#amount').value = amount;
+		}
+
+		if (isNaN(amount2)) {
+			amount2 = 1;
+			document.querySelector('#amount2').value = amount2;
+		}
+
 		let ri = {
 			'kcal': 2000,
 			'kj': 8400,
