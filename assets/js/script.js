@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'kj': 8400,
 			'fat': 70,
 			'fat_saturated': 20,
+			'cholesterol': 300,
 			'carbohydrate': 260,
 			'carbohydrate_sugars': 90,
 			'carbohydrate_sugars_added': 50,
@@ -127,7 +128,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			'chromium': 40,
 			'molybdenum': 50,
 			'iodine': 150,
-			'fluoride': 3.5
+			'fluoride': 3.5,
+			'choline': 500
 		};
 
 		document.querySelector('#product-link').href = products[product][flavor]['url'];
@@ -160,6 +162,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			document.querySelector('#fat-trans-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fat-trans-container').style.display = 'none';
+		}
+
+		if (products[product][flavor]['cholesterol'] !== undefined) {
+			document.querySelector('#cholesterol').textContent = number_format.format( parseFloat( products[product][flavor]['cholesterol'] ) * amount );
+			document.querySelector('#cholesterol-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['cholesterol'] ) * amount ) / ri['cholesterol'] );
+			document.querySelector('#cholesterol-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['cholesterol'] ) * amount ) * amount2 );
+			document.querySelector('#cholesterol-container').style.display = 'flex';
+		} else {
+			document.querySelector('#cholesterol-container').style.display = 'none';
 		}
 
 		document.querySelector('#carbohydrate').textContent = number_format.format( parseFloat( products[product][flavor]['carbohydrate'] ) * amount );
@@ -292,6 +303,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			document.querySelector('#fluoride-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fluoride-container').style.display = 'none';
+		}
+
+		if (products[product][flavor]['choline'] !== undefined) {
+			document.querySelector('#choline').textContent = number_format.format( parseFloat( products[product][flavor]['choline'] ) * amount );
+			document.querySelector('#choline-ri').textContent = percent_format.format( ( parseFloat( products[product][flavor]['choline'] ) * amount ) / ri['choline'] );
+			document.querySelector('#choline-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['choline'] ) * amount ) * amount2 );
+			document.querySelector('#choline-container').style.display = 'flex';
+		} else {
+			document.querySelector('#choline-container').style.display = 'none';
 		}
 	}
 

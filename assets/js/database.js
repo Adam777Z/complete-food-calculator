@@ -132,7 +132,7 @@ var products = {
 			"chromium": 0.08,
 			"molybdenum": 0.35,
 			"iodine": 0.31,
-			"choline_mg": 1.18,
+			"choline": 1.18,
 			"vitamin_d3_mcg": 0.02,
 			"vitamin_k2_mcg": 0.34,
 			"lycopene_mg": 0.01,
@@ -152,7 +152,6 @@ var products = {
 			"fat_polyunsaturated": 0.078,
 			"fat_monounsaturated": 0.024,
 			"fat_trans": 0,
-			"cholesterol": 0,
 			"carbohydrate": 0.37,
 			"carbohydrate_sugars": 0.006,
 			"carbohydrate_sugars_added": 0,
@@ -185,7 +184,7 @@ var products = {
 			"chromium": 0.08,
 			"molybdenum": 0.34,
 			"iodine": 0.3,
-			"choline_mg": 1.16,
+			"choline": 1.16,
 			"vitamin_d2_mcg": 0.02,
 			"vitamin_d3_mcg": 0.02,
 			"vitamin_k2_mcg": 0.33,
@@ -241,7 +240,7 @@ var products = {
 			"chromium": 0.1,
 			"molybdenum": 0.422,
 			"iodine": 0.33,
-			"choline_mg": 1.33,
+			"choline": 1.33,
 			"vitamin_d3_mcg": 0.02,
 			"vitamin_k2_mcg": 0.34,
 			"lycopene_mg": 0.011,
@@ -262,7 +261,6 @@ var products = {
 			"fat_polyunsaturated": 0.144,
 			"fat_monounsaturated": 0.03,
 			"fat_trans": 0.00556,
-			"cholesterol": 0,
 			"carbohydrate": 0.144,
 			"carbohydrate_sugars": 0.0144,
 			"carbohydrate_sugars_added": 0,
@@ -295,7 +293,7 @@ var products = {
 			"chromium": 0.1,
 			"molybdenum": 0.422,
 			"iodine": 0.33,
-			"choline_mg": 1.33,
+			"choline": 1.33,
 			"vitamin_d3_mcg": 0.02,
 			"vitamin_k2_mcg": 0.3889,
 			"lycopene_mg": 0.011,
@@ -775,7 +773,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
@@ -815,7 +813,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Coconut": {
@@ -855,7 +853,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
@@ -895,7 +893,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
@@ -935,7 +933,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Mango": {
@@ -975,7 +973,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		}
 	},
@@ -1017,7 +1015,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Vanilla": {
@@ -1057,7 +1055,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Chocolate": {
@@ -1097,7 +1095,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Banana": {
@@ -1137,7 +1135,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		},
 		"Strawberry": {
@@ -1177,7 +1175,7 @@ var products = {
 			"chromium": 0.084,
 			"molybdenum": 0.14,
 			"iodine": 0.32,
-			"choline_mg": 1.1,
+			"choline": 1.1,
 			"bacillus_coagulans_mn": 5
 		}
 	},
@@ -1219,7 +1217,7 @@ var products = {
 			"chromium": 0,
 			"molybdenum": 0.131,
 			"iodine": 0.303,
-			"choline_mg": 0.81
+			"choline": 0.81
 		}
 	},
 	"Mana ManaPowder Mark 6": {
@@ -1343,7 +1341,7 @@ var products = {
 			"chromium": 0,
 			"molybdenum": 0,
 			"iodine": 0.419,
-			"choline_mg": 1.05,
+			"choline": 1.05,
 			"cholesterol": 0
 		},
 		"Neutral (EU)": {
@@ -1383,7 +1381,7 @@ var products = {
 			"chromium": 0,
 			"molybdenum": 0,
 			"iodine": 0.419,
-			"choline_mg": 1.05
+			"choline": 1.05
 		}
 	},
 	"Satislent Original v2.1": {
