@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('select[id="product"]').add(option);
 	}
 
-	document.querySelector('select[id="product"]').addEventListener('change', (event) => {
+	document.querySelector('select[id="product"]').addEventListener('change', (event2) => {
 		document.querySelectorAll('select[id="flavor"] option').forEach(e => e.style.display = 'none');
 
-		let flavors = event.target.selectedOptions[0].dataset['flavors'].split(',');
+		let flavors = event2.target.selectedOptions[0].dataset['flavors'].split(',');
 
 		flavors.forEach((flavor) => {
 			document.querySelector('select[id="flavor"] option[value="' + flavor + '"]').style.display = 'block';
@@ -54,21 +54,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		calculate_values();
 	});
 
-	document.querySelector('select[id="flavor"]').addEventListener('change', (event) => {
+	document.querySelector('select[id="flavor"]').addEventListener('change', (event2) => {
 		calculate_values();
 	});
 
 	document.querySelectorAll('#amount, #amount2').forEach((e) => {
-		e.addEventListener('keypress', (event) => {
-			let charCode = event.which ? event.which : event.keyCode;
+		e.addEventListener('keypress', (event2) => {
+			let charCode = event2.which ? event2.which : event2.keyCode;
 			if ( charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57) ) {
-				event.preventDefault();
+				event2.preventDefault();
 				return false;
 			}
 		}, false);
 
-		['input', 'change'].forEach((event) => {
-			e.addEventListener((event), (event2) => {
+		['input', 'change'].forEach((type) => {
+			e.addEventListener((type), (event3) => {
 				if ( !isNaN( parseFloat(e.value) ) ) {
 					calculate_values();
 				}
@@ -321,19 +321,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	// }
 
 	// document.querySelectorAll('#amount3, #amount4').forEach((e) => {
-	// 	['input', 'change'].forEach((event) => {
-	// 		e.addEventListener((event), (event2) => {
+	// 	['input', 'change'].forEach((type) => {
+	// 		e.addEventListener((type), (event2) => {
 	// 			calculate_values2();
 	// 		});
 	// 	});
 
-	// 	e.addEventListener('click', (event) => {
-	// 		event.target.select();
+	// 	e.addEventListener('click', (event3) => {
+	// 		event3.target.select();
 	// 	});
 	// });
 
-	// document.querySelector('#amount-result').addEventListener('click', (event) => {
-	// 	event.target.select();
+	// document.querySelector('#amount-result').addEventListener('click', (event2) => {
+	// 	event2.target.select();
 	// 	document.execCommand('copy');
 	// });
 
