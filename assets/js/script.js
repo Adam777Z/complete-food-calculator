@@ -140,20 +140,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#fat').textContent = number_format.format( parseFloat( products[product][flavor]['fat'] ) * amount );
 		document.querySelector('#fat-saturated').textContent = number_format.format( parseFloat( products[product][flavor]['fat_saturated'] ) * amount );
 
-		if (products[product][flavor]['fat_polyunsaturated'] !== undefined) {
-			document.querySelector('#fat-polyunsaturated').textContent = number_format.format( parseFloat( products[product][flavor]['fat_polyunsaturated'] ) * amount );
-			document.querySelector('#fat-polyunsaturated-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['fat_polyunsaturated'] ) * amount ) * amount2 );
-			document.querySelector('#fat-polyunsaturated-container').style.display = 'flex';
-		} else {
-			document.querySelector('#fat-polyunsaturated-container').style.display = 'none';
-		}
-
 		if (products[product][flavor]['fat_monounsaturated'] !== undefined) {
 			document.querySelector('#fat-monounsaturated').textContent = number_format.format( parseFloat( products[product][flavor]['fat_monounsaturated'] ) * amount );
 			document.querySelector('#fat-monounsaturated-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['fat_monounsaturated'] ) * amount ) * amount2 );
 			document.querySelector('#fat-monounsaturated-container').style.display = 'flex';
 		} else {
 			document.querySelector('#fat-monounsaturated-container').style.display = 'none';
+		}
+
+		if (products[product][flavor]['fat_polyunsaturated'] !== undefined) {
+			document.querySelector('#fat-polyunsaturated').textContent = number_format.format( parseFloat( products[product][flavor]['fat_polyunsaturated'] ) * amount );
+			document.querySelector('#fat-polyunsaturated-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['fat_polyunsaturated'] ) * amount ) * amount2 );
+			document.querySelector('#fat-polyunsaturated-container').style.display = 'flex';
+		} else {
+			document.querySelector('#fat-polyunsaturated-container').style.display = 'none';
 		}
 
 		if (products[product][flavor]['fat_trans'] !== undefined) {
@@ -316,26 +316,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 
-	// function calculate_values2() {
-	// 	document.querySelector('#amount-result').value = parseFloat( ( parseFloat(document.querySelector('#amount3').value) / parseFloat(document.querySelector('#amount4').value) ).toPrecision(10) );
-	// }
+	/* function calculate_values2() {
+		document.querySelector('#amount-result').value = parseFloat( ( parseFloat(document.querySelector('#amount3').value) / parseFloat(document.querySelector('#amount4').value) ).toPrecision(10) );
+	}
 
-	// document.querySelectorAll('#amount3, #amount4').forEach((e) => {
-	// 	['input', 'change'].forEach((type) => {
-	// 		e.addEventListener((type), (event2) => {
-	// 			calculate_values2();
-	// 		});
-	// 	});
+	document.querySelectorAll('#amount3, #amount4').forEach((e) => {
+		['input', 'change'].forEach((type) => {
+			e.addEventListener((type), (event2) => {
+				calculate_values2();
+			});
+		});
 
-	// 	e.addEventListener('click', (event3) => {
-	// 		event3.target.select();
-	// 	});
-	// });
+		e.addEventListener('click', (event3) => {
+			event3.target.select();
+		});
+	});
 
-	// document.querySelector('#amount-result').addEventListener('click', (event2) => {
-	// 	event2.target.select();
-	// 	document.execCommand('copy');
-	// });
+	document.querySelector('#amount-result').addEventListener('click', (event2) => {
+		event2.target.select();
+		document.execCommand('copy');
+	});
 
-	// calculate_values2();
+	calculate_values2(); */
 });
