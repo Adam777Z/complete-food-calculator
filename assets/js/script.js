@@ -3,10 +3,14 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-	var tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
-		return new bootstrap.Tooltip(tooltipTriggerEl);
-	});
+	function init_tooltips() {
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+		var tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
+			return new bootstrap.Tooltip(tooltipTriggerEl);
+		});
+	}
+
+	init_tooltips();
 
 	var spinner_container = document.querySelector('#spinner-container');
 	var section_main = document.querySelector('#section-main');
@@ -197,6 +201,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		document.querySelector('#protein').textContent = number_format.format( parseFloat( products[product][flavor]['protein'] ) * amount );
 		document.querySelector('#salt').textContent = number_format.format( parseFloat( products[product][flavor]['salt'] ) * amount );
+		bootstrap.Tooltip.getInstance('#sodium').setContent( { '.tooltip-inner': 'Sodium (g): ' + number_format.format( parseFloat( products[product][flavor]['salt'] ) / 2.5 * amount ) } );
 		document.querySelector('#vitamin-a').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_a'] ) * amount );
 		document.querySelector('#vitamin-b1').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b1_thiamine'] ) * amount );
 		document.querySelector('#vitamin-b2').textContent = number_format.format( parseFloat( products[product][flavor]['vitamin_b2_riboflavin'] ) * amount );
@@ -269,6 +274,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelector('#fiber-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['fiber'] ) * amount ) * amount2 );
 		document.querySelector('#protein-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['protein'] ) * amount ) * amount2 );
 		document.querySelector('#salt-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['salt'] ) * amount ) * amount2 );
+		bootstrap.Tooltip.getInstance('#sodium-x').setContent( { '.tooltip-inner': 'Sodium (g): ' + number_format.format( ( parseFloat( products[product][flavor]['salt'] ) / 2.5 * amount ) * amount2 ) } );
 		document.querySelector('#vitamin-a-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_a'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-b1-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b1_thiamine'] ) * amount ) * amount2 );
 		document.querySelector('#vitamin-b2-x').textContent = number_format.format( ( parseFloat( products[product][flavor]['vitamin_b2_riboflavin'] ) * amount ) * amount2 );
